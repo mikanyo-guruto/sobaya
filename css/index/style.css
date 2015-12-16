@@ -1,0 +1,104 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+p,h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/*---mainコンテンツ---*/
+body{
+	background-color: #8B4513;
+}
+
+.main {
+	width: 1000px;
+	height: 100%;
+}
+
+
+.header img{
+	width: 1000px;
+	height: 400px;
+}
+
+/*---ナビゲーション---*/
+nav {
+    margin-top: 20px;
+}
+/*---ENDナビゲーション---*/
+
+
+/*---新着情報---*/
+.news {
+	float: left;
+    overflow: hidden;
+	width: 648px;
+	height: 348px;
+	border: 1px solid darkred;
+	background-color: darkred;
+}
+.news h2 {
+	padding: 20px;
+}
+.news li{
+	list-style: none;
+}
+.news img {
+    margin: 0 10px;
+    float: left;
+	height: 100px;
+    width: 100px;
+}
+.news section {
+    clear: both;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+}
+.news section p {
+    font-size: 20px;
+    padding-top: 10px;
+}
+.news .another {
+    float: right;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -15px;
+    margin-right: 5px;
+}
+/*---END新着情報---*/
+
+
+/*---地図---*/
+.map {
+	border: 1px solid black;
+	background-color: white;
+	float: left;
+	height: 348px;
+    margin-left: 3px;
+    overflow: hidden;
+    width: 348px;
+}
+/*---END地図---*/
+
+
+/*---フッター設定---*/
+.footer {
+    border: 1px solid black;
+	clear: both;
+	font-size: 18px;
+	height: 54px;
+    margin-top: 120px;
+    overflow: hidden;
+    position: relative;
+    width: 998px;
+}
+.footer .tel{
+    padding-right: 10px;
+	text-align: right;
+}
+.footer .copy{
+	text-align: center;
+}
+/*---ENDフッター---*/
