@@ -1,0 +1,106 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+p,h2,h3,h4 {
+    margin: 0;
+    padding: 0;
+}
+
+/*---mainコンテンツ---*/
+body{
+	background-color: #8B4513;
+}
+
+.main {
+	width: 1000px;
+	height: auto;
+}
+
+.header {
+    background-image: url("../../img/index/header.jpg");
+    height: 100px;
+    width: 1000px;
+}
+
+/*---ナビゲーション---*/
+nav {
+    margin-top: 20px;
+}
+/*---ENDナビゲーション---*/
+
+
+/*---コンテンツ---*/
+.menu_contents {
+	background-color: white;
+	border-radius: 0 0 10px 10px / 0 0 10px 10px;
+	overflow: hidden;
+	padding: 15px 25px;
+	padding-bottom: 40px;
+}
+.menu_contents li {
+	float: left;
+	height: 200px;
+	list-style: none;
+	margin-top: 10px;
+	margin-bottom: 55px;
+	position: relative;
+	width: 250px;
+}
+.menu_contents .center_margin {
+	margin-right: 100px;
+	margin-left: 100px;
+}
+.menu_contents .cool,
+.menu_contents .hot {
+	font-size: 20px;
+	font-weight: bold;
+	right: 0;
+	position: absolute;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+.menu_contents .cool {
+	color: skyblue;
+}
+.menu_contents .hot {
+	color: red;
+}
+.menu_contents li h2,
+.menu_contents li h3 {
+	text-align: center;
+}
+.menu_contents li h2 {
+	font-size: 24px;
+	padding-top: 10px;
+}
+.menu_contents li h3 {
+	font-size: 22px;
+}
+.menu_contents li img {
+	
+	height: 100%;
+	width: 100%;
+}
+/*---ENDコンテンツ---*/
+
+
+/*---フッター設定---*/
+.footer {
+    border: 1px solid black;
+	clear: both;
+	font-size: 18px;
+	height: 54px;
+    overflow: hidden;
+    position: relative;
+    width: 998px;
+}
+.footer .tel{
+    padding-right: 10px;
+	text-align: right;
+}
+.footer .copy{
+	text-align: center;
+}
+/*---ENDフッター---*/
