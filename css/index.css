@@ -7,12 +7,11 @@ p,h2 {
     padding: 0;
 }
 
-/*---mainコンテンツ---*/
 body{
 	background-color: #8B4513;
 }
 
-.main {
+.wrap {
 	width: 1000px;
 	height: 100%;
 }
@@ -28,57 +27,57 @@ nav {
 }
 /*---ENDナビゲーション---*/
 
+/*---main---*/
+.main {
+    overflow: hidden;
+}
 
 /*---新着情報---*/
 .news {
 	float: left;
     overflow: hidden;
-	width: 648px;
-	height: 348px;
-	border: 1px solid darkred;
-	background-color: darkred;
+	width: 638px;
 }
 .news h2 {
-	padding: 20px;
+    border-left: solid 10px white;
+    margin-left: 20px;
+    padding-left: 10px;
 }
-.news li{
-	list-style: none;
+.news .news_fb {
+    margin-top: 20px;
+    text-align: center;
 }
-.news img {
-    margin: 0 10px;
-    float: left;
-	height: 100px;
-    width: 100px;
-}
-.news section {
-    clear: both;
-    margin: 0 0 20px 0;
-    overflow: hidden;
-}
-.news section p {
-    font-size: 20px;
-    padding-top: 10px;
-}
-.news .another {
-    float: right;
-    overflow: hidden;
-    box-sizing: border-box;
-    margin-top: -15px;
-    margin-right: 5px;
-}
+
 /*---END新着情報---*/
 
 
 /*---地図---*/
 .map {
-	border: 1px solid black;
-	background-color: white;
+    background-color: white;
 	float: left;
 	height: 348px;
-    margin-left: 3px;
+    margin-left: 13px;
     overflow: hidden;
     width: 348px;
 }
+.map h2 {
+    border-left: solid 10px black;
+    color: black;
+    font-size: 24px;
+    margin: 10px;
+    padding-left: 5px;
+}
+
+.link section {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.link section img {
+    height: 100px;
+    width: 320px;
+}
+
 /*---END地図---*/
 
 
@@ -88,7 +87,8 @@ nav {
 	clear: both;
 	font-size: 18px;
 	height: 54px;
-    margin-top: 120px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     overflow: hidden;
     position: relative;
     width: 998px;
