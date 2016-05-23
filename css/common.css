@@ -1,4 +1,4 @@
-/*---ÉiÉrÉQÅ[ÉVÉáÉì---*/
+/*---„Éä„Éì„Ç≤„Éº„Ç∑„Éß„É≥---*/
 .navbar {
     margin-top: 20px;
 }
@@ -15,4 +15,46 @@
 .nav li {
     font-size: 18px;
 }
-/*---ENDÉiÉrÉQÅ[ÉVÉáÉì---*/
+/*---END„Éä„Éì„Ç≤„Éº„Ç∑„Éß„É≥---*/
+
+/*---„Éï„ÉÉ„Çø„ÉºË®≠ÂÆö---*/
+.footer {
+    background-image: url(../img/common/img_1.jpg);
+	clear: both;
+    color: paleturquoise;
+	font-size: 18px;
+    height: 180px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 180px;
+    overflow: hidden;
+    padding-top: 20px;
+    position: relative;
+    width: 1000px;
+}
+.footer .footer_left,
+.footer_right {
+    height: 110px;
+    overflow: hidden;
+}
+.footer .footer_left {
+    float: left;
+    padding-left: 40px;
+    width: 400px;
+}
+.footer .footer_left .tel {
+    font-size: 36px;
+    text-align: center;
+}
+.footer .footer_right {
+    font-size: 16px;
+    padding-left: 80px;
+    width: 600px;
+}
+.footer .copy {
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+	text-align: center;
+}
+/*---END„Éï„ÉÉ„Çø„Éº---*/

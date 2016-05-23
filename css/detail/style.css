@@ -1,4 +1,4 @@
-*{
+﻿*{
 	margin: 0 auto;
 	padding: 0;
 }
@@ -52,23 +52,3 @@ nav {
     padding: 10px 20px;
 }
 /*---ENDコンテンツ---*/
-
-
-/*---フッター設定---*/
-.footer {
-    border: 1px solid black;
-	clear: both;
-	font-size: 18px;
-	height: 54px;
-    overflow: hidden;
-    position: relative;
-    width: 998px;
-}
-.footer .tel{
-    padding-right: 10px;
-	text-align: right;
-}
-.footer .copy{
-	text-align: center;
-}
-/*---ENDフッター---*/
