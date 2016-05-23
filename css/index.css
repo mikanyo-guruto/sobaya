@@ -22,24 +22,7 @@ body{
     text-align: center;
 	width: 1000px;
 }
-/*---ナビゲーション---*/
-.navbar {
-    margin-top: 20px;
-}
-.navbar-justified {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-}
-.navbar-justified > li {
-    display: table-cell;
-    width: 100%;
-}
 
-.nav li {
-    font-size: 18px;
-}
-/*---ENDナビゲーション---*/
 
 /*---main---*/
 .main {
