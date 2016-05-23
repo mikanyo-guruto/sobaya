@@ -16,14 +16,28 @@ body{
 	height: 100%;
 }
 
-.header img{
+.header {
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
 	width: 1000px;
-	height: 400px;
+}
+/*---ナビゲーション---*/
+.navbar {
+    margin-top: 20px;
+}
+.navbar-justified {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.navbar-justified > li {
+    display: table-cell;
+    width: 100%;
 }
 
-/*---ナビゲーション---*/
-nav {
-    margin-top: 20px;
+.nav li {
+    font-size: 18px;
 }
 /*---ENDナビゲーション---*/
 
@@ -74,7 +88,7 @@ nav {
     margin-left: 30px;
 }
 .link section img {
-    height: 100px;
+    height: 80px;
     width: 320px;
 }
 
@@ -83,21 +97,39 @@ nav {
 
 /*---フッター設定---*/
 .footer {
-    border: 1px solid black;
+    background-image: url(../img/common/img_1.jpg);
 	clear: both;
+    color: paleturquoise;
 	font-size: 18px;
-	height: 54px;
     margin-bottom: 20px;
     margin-top: 20px;
     overflow: hidden;
+    padding-top: 20px;
     position: relative;
-    width: 998px;
+    width: 100%;
 }
-.footer .tel{
-    padding-right: 10px;
-	text-align: right;
+.footer .footer_left,
+.footer_right {
+    overflow: hidden;
 }
-.footer .copy{
+.footer .footer_left {
+    float: left;
+    padding-left: 40px;
+    width: 400px;
+}
+.footer .footer_left .tel {
+    font-size: 36px;
+    text-align: center;
+}
+.footer .footer_right {
+    font-size: 16px;
+    padding-left: 80px;
+    width: 600px;
+}
+.footer .copy {
+    font-size: 14px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 	text-align: center;
 }
 /*---ENDフッター---*/
