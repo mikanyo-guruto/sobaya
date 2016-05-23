@@ -1,4 +1,4 @@
-﻿*{
+*{
 	margin: 0 auto;
 	padding: 0;
 }
@@ -8,13 +8,12 @@ p,h2,h3,h4 {
 }
 
 /*---mainコンテンツ---*/
-body{
-	background-color: #8B4513;
+.wrap {
+    background-color: #8B4513;
 }
-
 .main {
-	width: 1000px;
-	height: auto;
+    height: auto;
+	width: 1000px;	
 }
 
 .header {
@@ -36,7 +35,6 @@ nav {
 	border-radius: 0 0 10px 10px / 0 0 10px 10px;
 	overflow: hidden;
 	padding: 15px 25px;
-	padding-bottom: 40px;
 }
 .menu_contents li {
 	float: left;
