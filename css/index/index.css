@@ -7,8 +7,8 @@ p,h2 {
     padding: 0;
 }
 
-body{
-	background-color: #8B4513;
+body {
+    background-image: url(../../img/bgimg.jpg);
 }
 
 .wrap {
@@ -41,7 +41,6 @@ body{
     padding-left: 10px;
 }
 .news .news_fb {
-    margin-top: 20px;
     text-align: center;
 }
 
@@ -76,5 +75,4 @@ body{
 }
 
 /*---END地図---*/
-
 

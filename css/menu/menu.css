@@ -7,10 +7,11 @@ p,h2,h3,h4 {
     padding: 0;
 }
 
-/*---mainコンテンツ---*/
-.wrap {
+body {
     background-color: #8B4513;
 }
+
+/*---mainコンテンツ---*/
 .main {
     height: auto;
 	width: 1000px;	
