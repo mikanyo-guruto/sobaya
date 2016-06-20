@@ -1,3 +1,6 @@
+.contents {
+    overflow: hidden;
+}
 /*---ナビゲーション---*/
 .navbar {
     margin-top: 20px;
@@ -19,27 +22,27 @@
     font-weight: bold;
 }
 
-/* フェード処理 */
 .nav li a {
+    color: #337ab7;
     border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
-    color: black;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease;  /* フェード処理 */
 }
 .nav li a:hover {
-    background-color: cadetblue;
-    color: white;
+    background-color: darkcyan;
+    color: paleturquoise;
 }
 /*---ENDナビゲーション---*/
 
 /*---フッター設定---*/
 .footer {
-    background-image: url(../img/common/img_1.jpg);
+    background-color: darkslateblue;
 	clear: both;
     color: paleturquoise;
 	font-size: 18px;
     height: 180px;
     margin-top: 20px;
     height: 180px;
+    opacity: 0.7;
     overflow: hidden;
     padding-top: 20px;
     position: relative;

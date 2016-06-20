@@ -1,19 +1,20 @@
 *{
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 }
 p,h2 {
     margin: 0;
     padding: 0;
 }
-
-body {
-    background-image: url(../../img/bgimg.jpg);
-}
-
 .wrap {
-	width: 1000px;
-	height: 100%;
+    background-image: url(../../img/bgimg.jpg);
+    display: block;
+    overflow-x: hidden;
+}
+.main {
+    margin: 0 auto;
+    height: 100%;
+    width: 1000px;
 }
 
 .header {
@@ -23,38 +24,36 @@ body {
 	width: 1000px;
 }
 
-
-/*---main---*/
-.main {
+/*---indexのコンテンツ---*/
+.contents {
     overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/*---ENDコンテンツ---*/
+.left_contents {
+    float: left;
+    overflow: hidden;
+	width: 578px;
 }
 
 /*---新着情報---*/
-.news {
-	float: left;
-    overflow: hidden;
-	width: 638px;
-}
 .news h2 {
     border-left: solid 10px white;
-    margin-left: 20px;
     padding-left: 10px;
-}
-.news .news_fb {
-    text-align: center;
 }
 
 /*---END新着情報---*/
 
+/*---右側のコンテンツ---*/
+.right_contents {
+    overflow: hidden;
+    width: 322px;
+}
 
 /*---地図---*/
 .map {
-    background-color: white;
-	float: left;
-	height: 348px;
-    margin-left: 13px;
-    overflow: hidden;
-    width: 348px;
+	height: auto;
 }
 .map h2 {
     border-left: solid 10px black;
@@ -63,16 +62,21 @@ body {
     margin: 10px;
     padding-left: 5px;
 }
+/*---END地図---*/
 
+/*---バナー---*/
+.link {
+    height: auto;
+    overflow: hidden;
+}
 .link section {
-    float: left;
     margin-top: 20px;
-    margin-left: 30px;
+    text-align: center;
 }
 .link section img {
     height: 80px;
     width: 320px;
 }
-
-/*---END地図---*/
+/*---ENDバナー---*/
+/*---END右側コンテンツ---*/
 
