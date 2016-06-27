@@ -1,24 +1,7 @@
-﻿*{
-	margin: 0 auto;
-	padding: 0;
-}
-p,h2 {
-    margin: 0;
-    padding: 0;
-}
-
 /*---mainコンテンツ---*/
-body{
-	background-color: #8B4513;
-}
-
-.main {
-	width: 1000px;
-	height: 100%;
-}
 
 .header {
-    background-image: url("../../img/index/header.jpg");
+    background-image: url("../img/index/header.jpg");
     height: 100px;
     width: 1000px;
 }
@@ -29,6 +12,9 @@ nav {
 }
 /*---ENDナビゲーション---*/
 
+.wrap {
+    overflow-x: scroll;
+}
 
 /*---コンテンツ---*/
 .contents p {

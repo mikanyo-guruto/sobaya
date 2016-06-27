@@ -1,24 +1,11 @@
-*{
-	margin: 0 auto;
-	padding: 0;
-}
-p,h2,h3,h4 {
+h3,h4 {
     margin: 0;
     padding: 0;
 }
 
-body {
-    background-color: #8B4513;
-}
-
 /*---mainコンテンツ---*/
-.main {
-    height: auto;
-	width: 1000px;	
-}
-
 .header {
-    background-image: url("../../img/index/header.jpg");
+    background-image: url("../img/index/header.jpg");
     height: 100px;
     width: 1000px;
 }
@@ -29,14 +16,14 @@ nav {
 }
 /*---ENDナビゲーション---*/
 
-
 /*---コンテンツ---*/
 .menu_contents {
 	background-color: white;
 	border-radius: 0 0 10px 10px / 0 0 10px 10px;
-	overflow: hidden;
+    height: 570px;
+    overflow: hidden;
 	padding: 15px 25px;
-}
+} 
 .menu_contents li {
 	float: left;
 	height: 200px;
