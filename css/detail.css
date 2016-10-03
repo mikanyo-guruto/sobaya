@@ -1,0 +1,68 @@
+h2 {
+    margin: 0;
+    width: 120px;
+}
+ul {
+    margin: 0;
+}
+.inp {
+    font-size: 18px;
+    height: 100%;
+    padding-left: 10px;
+}
+.title {
+    float: left;
+    line-height: 40px;
+}
+
+.main {
+    height: 240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 1000px;
+}
+.main ul {
+    height: auto;
+}
+.main ul li {
+    clear: both;
+    height: 40px;
+    overflow: hidden;
+}
+.edit {
+    height: auto;
+}
+.edit img {
+    float: left;
+    height: 240px;
+    width: 300px;
+}
+.edit ul {
+    margin-left: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+.edit ul li {
+    list-style: none;
+}
+.edit ul li:not(:first-child) {
+    margin-top: 20px;
+}
+
+/* #商品名 */
+.name {
+    overflow: hidden;
+}
+/* end */
+
+/* #暖かさ */
+.warmth {
+    font-size: 18px;
+}
+.warmth span {
+    line-height: 40px;
+}
+/* end */
+.sub_btn > button{
+    width: 100%;
+}
