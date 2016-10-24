@@ -7,12 +7,40 @@
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 
 </head>
-<body>
 <?php
 	include 'Product.php';
 	$product = new Product();
 	$recode = $product->getRecodes();
+
+	function getTmpStr($tmp) {
+		$str = null;
+		$html = null;
+		if($tmp == "both") {
+			$html = '
+				<p class="cool">冷</p>
+				<p class="hot">暖</p>
+			';
+		}else{
+			switch($tmp){
+			case "cool":
+				$str = "冷";
+				break;
+			case "hot":
+				$str = "暖";
+				break;
+			}
+			$html = "<p class=" . $tmp . ">" . $str . "</p>";
+		}
+		
+		return $html;
+	}
+	
+	function getHtmlTag($genre) {
+		var_dump($recode);
+	}
 ?>
+
+<body>
 <div class="wrap">
     <div class="main">
         <div class="header">
@@ -40,65 +68,151 @@
                     <li><a href="#drink" data-toggle="tab">飲み物</a></li>
                 </ul>
             <div class="tab-content menu_contents">
-                <div class="tab-pane fade in active" id="men">
-                        <ul>
-                            <?php
-                                foreach($recode['noodle'] as $key) {
-                                    ?><li>
-                                       <span class="cool">冷</span>
-                                       <img src="./img/menu/tenzaru.jpg">
-                                       <h2><?php echo $key['name']; ?></h2><h3>1,150円</h3>
-                                    </li>
-                                <?php } ?>
-                        </ul>
-                    </div>
+            
+                <div class="tab-pane gade" id="men">
+                	<ul>
+	                	<?php
+	                		if(!empty($recode['rice'])) {
+		                    	foreach($recode['rice'] as $key) {
+	                    ?>
+	                    	<li>
+	                    		<div class="tmp">
+	                    			<?php echo getTmpStr($key['tmp']); ?>
+	                    		</div>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                    <?php 	}
+	                    	}else{
+								echo "データがありません";
+							}
+						?>
+	                </ul>
+              	</div>
+              	
                 <div class="tab-pane gade" id="gohan">
-                    <ul>
-                            <?php
-                                foreach($recode['rice'] as $key) {
-                                    ?><li>
-                                       <span class="cool">冷</span>
-                                       <img src="./img/menu/tenzaru.jpg">
-                                       <h2><?php echo $key['name']; ?></h2><h3>1,150円</h3>
-                                    </li>
-                                <?php } ?>
-                        </ul>
-                        </div>
+                    <?php echo getHtmlTag("rice"); ?>
+                </div>
 
                 <div class="tab-pane gade" id="nabe">
-                            <?php
-                                foreach($recode['rice'] as $key) {
-                                    ?><li>
-                                       <span class="cool">冷</span>
-                                       <img src="./img/menu/tenzaru.jpg">
-                                       <h2><?php echo $key['name']; ?></h2><h3>1,150円</h3>
-                                    </li>
-                                <?php } ?>
-                        </div>
+                	<ul>
+	                	<?php
+	                    	foreach($recode['pot'] as $key) {
+	                    ?>
+	                    	<li>
+	                        	<span class="<?php echo $key['tmp']; ?>">
+	                        	<?php
+	                        		switch($key['tmp']){
+										case "cool":
+											echo "冷";
+											break;
+										case "hot":
+											echo "暖";
+											break;
+										case "both":
+											echo "冷 暖";
+											break;
+										case "none":
+											break;
+									}
+								?>
+	                        	</span>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                    <?php } ?>
+	                </ul>
+              	</div>
 
                 <div class="tab-pane gade" id="seiro">
-                        <ul>
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                            </ul>
-                    </div>
+                	<ul>
+	                	<?php
+	                    	foreach($recode['bamboo streamer'] as $key) {
+	                    ?>
+	                    	<li>
+	                        	<span class="<?php echo $key['tmp']; ?>">
+	                        	<?php
+	                        		switch($key['tmp']){
+										case "cool":
+											echo "冷";
+											break;
+										case "hot":
+											echo "暖";
+											break;
+										case "both":
+											echo "冷 暖";
+											break;
+										case "none":
+											break;
+									}
+								?>
+	                        	</span>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                    <?php } ?>
+	                </ul>
+              	</div>
                 
                 <div class="tab-pane gade" id="mini">
-                            <ul>
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                            </ul>
-                        </div>
+                	<ul>
+	                	<?php
+	                    	foreach($recode['mini'] as $key) {
+	                    ?>
+	                    	<li>
+	                        	<span class="<?php echo $key['tmp']; ?>">
+	                        	<?php
+	                        		switch($key['tmp']){
+										case "cool":
+											echo "冷";
+											break;
+										case "hot":
+											echo "暖";
+											break;
+										case "both":
+											echo "冷 暖";
+											break;
+										case "none":
+											break;
+									}
+								?>
+	                        	</span>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                    <?php } ?>
+	                </ul>
+              	</div>
 
                 <div class="tab-pane gade" id="drink">
-                            <ul>
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                               <li><p>あああ</p></li> 
-                            </ul>
-                        </div>
+                	<ul>
+	                	<?php
+	                    	foreach($recode['drink'] as $key) {
+	                    ?>
+	                    	<li>
+	                        	<span class="<?php echo $key['tmp']; ?>">
+	                        	<?php
+	                        		switch($key['tmp']){
+										case "cool":
+											echo "冷";
+											break;
+										case "hot":
+											echo "暖";
+											break;
+										case "both":
+											echo "冷 暖";
+											break;
+										case "none":
+											break;
+									}
+								?>
+	                        	</span>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                    <?php } ?>
+	                </ul>
+              	</div>
             </div>
         </div>
 
