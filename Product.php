@@ -12,7 +12,7 @@ class Product {
             // 検索をかけるジャンルの名前
 	        $stmt = $db->query("SELECT * FROM products");
 	        // レコードを配列に格納
-	        $recodes = array('noodle'=>array(), 'rice'=>array(), 'pot'=>array(), 'bamboo steamer'=>array(), 'mini'=>array(), 'drink'=>array());
+	        $recodes = array('noodle'=>array(), 'rice'=>array(), 'pot'=>array(), 'bamboo_steamer'=>array(), 'mini'=>array(), 'drink'=>array());
 	        
 	        $i = 0;
 	        // 配列に格納
