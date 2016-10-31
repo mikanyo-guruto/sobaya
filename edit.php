@@ -3,6 +3,39 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/edit.css">
 </head>
+<?php
+	include 'Product.php';
+	$product = new Product();
+	$recode = $product->getRecodes();
+
+	function getTmpStr($tmp) {
+		$str = null;
+		$html = null;
+		if($tmp == "both") {
+			$html = '
+				<p class="cool">冷</p>
+				<p class="hot">暖</p>
+			';
+		}else{
+			switch($tmp){
+			case "cool":
+				$str = "冷";
+				break;
+			case "hot":
+				$str = "暖";
+				break;
+			}
+			$html = "<p class=" . $tmp . ">" . $str . "</p>";
+		}
+		
+		return $html;
+	}
+	
+	function getHtmlTag($genre) {
+		echo $genre;
+		var_dump($recode);
+	}
+?>
 <body>
     <div class="wrap">
         <h1>メニュー変更画面</h1>
@@ -18,30 +51,26 @@
                 </ul>
             <div class="tab-content menu_contents">
                 <div class="tab-pane fade in active" id="men">
-                        <ul>
-                            <a href="./detail.html">
-                                <li>
-                                   <span class="cool">冷</span>
-                                   <img src="./img/menu/tenzaru.jpg">
-                                   <h2>天ざる</h2><h3>1,150円</h3>
-                                </li> 
-                            </a>
-                           <li class="center_margin">
-                                   <span class="hot">温</span>
-                                   <img src="./img/menu/tenpurasoba.jpg">
-                                   <h2>天ぷら</h2><h3>1.000円</h3>
-                               </li>
-                           <li>
-                                   <span class="cool">冷</span>
-                                   <span class="hot">温</span>
-                                   <img src="./img/menu/tenzaru.jpg">
-                                   <h2>きすげおろし</h2><h3>1,080円</h3>
-                               </li> 
-                           <li>
-                                   <img src="./img/menu/tenzaru.jpg">
-                                   <h2>あげそば チャンポン</h2><h3>1,080円</h3>
-                               </li> 
-                        </ul>
+                	<ul>
+	                	<?php
+	                		if(!empty($recode['noodle'])) {
+		                    	foreach($recode['noodle'] as $key) {
+	                    ?>
+	                    	<a href="<?php echo "./detail.php/id=" . $key['id']; ?>">
+	                    	<li>
+	                    		<div class="tmp">
+	                    			<?php echo getTmpStr($key['tmp']); ?>
+	                    		</div>
+	                            <img src="./img/menu/<?php echo $key['img']; ?>">
+	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+	                        </li>
+	                        </a>
+	                    <?php 	}
+	                    	}else{
+								echo "データがありません";
+							}
+						?>
+	                </ul>
                     </div>
                 <div class="tab-pane gade" id="gohan">
                             <ul>

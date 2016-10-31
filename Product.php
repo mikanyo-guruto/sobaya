@@ -1,13 +1,20 @@
 <?php
 class Product {
+	
+	private $dsn;
+	private $user;
+	private $pass;
+	
+	function __construct() {
+		$this->dsn = 'mysql:dbname=test;host=localhost';
+	    $this->user = 'root';
+	    $this->pass = '';
+    }
     
+    // Productのレコードを全件取得
     public function getRecodes() {
-        $dsn = 'mysql:dbname=test;host=localhost';
-        $user = 'root';
-        $pass = '';
-
         try {
-            $db = new PDO($dsn, $user, $pass);
+            $db = new PDO($this->dsn, $this->user, $this->pass);
             
             // 検索をかけるジャンルの名前
 	        $stmt = $db->query("SELECT * FROM products");
@@ -33,6 +40,24 @@ class Product {
             return false;
         }
     }
+    
+    /*
+    	指定したIDを検索
+    	引数: ID
+    	途中でエラーが出た場合falseを返す
+    */
+    public function findId($id) {
+		try {
+            $db = new PDO($this->dsn, $this->user, $this->pass);
+            $stmt = $db->query("SELECT * FROM products WHERE id LIKE " . $id);
+            //query実行
+            $recode = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+			return $recode;
+		} catch(PDOException $e) {
+			return false;
+		}
+	}
     
     /*
     	### 受け取った温度データを文字に変換する関数
