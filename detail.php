@@ -12,13 +12,6 @@
             return false; // 送信を中止
         }
     }
-    
-    function clearBtn($div) {
-		$elmt = document.getElementById($div);
-		if($elmt.checked) {
-			$elmt.checked = false;
-		}
-	}
     </script>
 </head>
 <?php 
@@ -40,9 +33,9 @@
 	                </li>
 	                <li class="warmth">
 	                    <h2 class="title">暖かさ</h2>
-	                    <input type="radio" id="radio1" name="warth[0]" value="1" <?php if($item['tmp'] == 0 || $item['tmp'] == 2) echo "checked"; ?> onclick="clearBtn('radio1')"><span>冷</span>
-	                    <input type="radio" id="radio2" name="warth[1]" value="2" <?php if($item['tmp'] == 1 || $item['tmp'] == 2) echo "checked"; ?>><span>暖</span>
-	                    <input type="radio" id="radio3" name="warth[2]" value="4" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
+	                    <input type="checkbox" id="radio1" name="warth[0]" value="1" <?php if($item['tmp'] == 0 || $item['tmp'] == 2) echo "checked"; ?> onclick="clearBtn('radio1')"><span>冷</span>
+	                    <input type="checkbox" id="radio2" name="warth[1]" value="2" <?php if($item['tmp'] == 1 || $item['tmp'] == 2) echo "checked"; ?>><span>暖</span>
+	                    <input type="checkbox" id="radio3" name="warth[2]" value="4" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
 	                </li>
 	                <li class="price">
 	                    <h2 class="title">値段</h2>
