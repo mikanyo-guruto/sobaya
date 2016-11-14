@@ -34,13 +34,7 @@
 		
 		return $html;
 	}
-	
-	function getHtmlTag($genre) {
-		echo $genre;
-		var_dump($recode);
-	}
 ?>
-
 <body>
 <div class="wrap">
     <div class="main">

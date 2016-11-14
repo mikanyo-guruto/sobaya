@@ -1,10 +1,9 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/detail.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/detail.css">
     <script type="text/javascript"> 
     function check(){
-
         if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示
             return true; // 「OK」時は送信を実行
         }
@@ -13,19 +12,26 @@
             return false; // 送信を中止
         }
     }
+    
+    function clearBtn($div) {
+		$elmt = document.getElementById($div);
+		if($elmt.checked) {
+			$elmt.checked = false;
+		}
+	}
     </script>
 </head>
 <?php 
 	include 'Product.php';
 	$product = new Product();
-	$id = preg_match('/id=(\w+)/', $_SERVER["REQUEST_URI"]);
+	$id = $_GET['id'];
 	$item = $product->findId($id);
 ?>
 <body>
     <div class="wrap">
         <h1>メニュー変更画面</h1>
         <div class="main">
-            <form name="edit" class="edit" method="post" onSubmit="return check()">
+            <form name="edit" class="edit" id="edit" action="action.php" method="post">
             <?php if(!empty($item)) { ?>
 	            <img src="./img/menu/<?php echo $item['img']; ?>">
 	            <ul>
@@ -34,9 +40,9 @@
 	                </li>
 	                <li class="warmth">
 	                    <h2 class="title">暖かさ</h2>
-	                    <input type="radio" name="warth" value="1" <?php if($item['tmp'] == 1 || $item['tmp'] == 3)? echo "checked='checked'" : ""; ?>><span>冷</span>
-	                    <input type="radio" name="warth" value="2" <?php if($item['tmp'] == 1 || $item['tmp'] == 3)? echo "checked='checked'" : ""; ?>>暖
-	                    <input type="radio" name="warth" value="4" <?php if($item['tmp'] == 4)? echo "checked='checked'" : ""; ?>>無
+	                    <input type="radio" id="radio1" name="warth[0]" value="1" <?php if($item['tmp'] == 0 || $item['tmp'] == 2) echo "checked"; ?> onclick="clearBtn('radio1')"><span>冷</span>
+	                    <input type="radio" id="radio2" name="warth[1]" value="2" <?php if($item['tmp'] == 1 || $item['tmp'] == 2) echo "checked"; ?>><span>暖</span>
+	                    <input type="radio" id="radio3" name="warth[2]" value="4" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
 	                </li>
 	                <li class="price">
 	                    <h2 class="title">値段</h2>
@@ -46,8 +52,7 @@
 	                    <button type="submit" class="btn btn-success">変更</button>
 	                </li>
 	            </ul>
-	        <?php }else{ echo "ERROR"; }
-			?>
+	        <?php }else{ echo "ERROR"; }?>
             </form>
         </div>
     </div>

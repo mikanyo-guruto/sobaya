@@ -6,7 +6,7 @@ class Product {
 	private $pass;
 	
 	function __construct() {
-		$this->dsn = 'mysql:dbname=test;host=localhost';
+		$this->dsn = 'mysql:dbname=sobaya;host=localhost';
 	    $this->user = 'root';
 	    $this->pass = '';
     }
@@ -57,6 +57,11 @@ class Product {
 		} catch(PDOException $e) {
 			return false;
 		}
+	}
+    
+    public function updateRecode() {
+		echo "in";
+		exit;
 	}
     
     /*
