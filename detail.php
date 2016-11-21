@@ -33,16 +33,18 @@
 	                </li>
 	                <li class="warmth">
 	                    <h2 class="title">暖かさ</h2>
-	                    <input type="checkbox" id="radio1" name="warth[0]" value="1" <?php if($item['tmp'] == 0 || $item['tmp'] == 2) echo "checked"; ?> onclick="clearBtn('radio1')"><span>冷</span>
-	                    <input type="checkbox" id="radio2" name="warth[1]" value="2" <?php if($item['tmp'] == 1 || $item['tmp'] == 2) echo "checked"; ?>><span>暖</span>
-	                    <input type="checkbox" id="radio3" name="warth[2]" value="4" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
+	                    <input type="radio" name="tmp" value="0" <?php if($item['tmp'] == 0) echo "checked"; ?>><span>冷</span>
+	                    <input type="radio" name="tmp" value="1" <?php if($item['tmp'] == 1) echo "checked"; ?>><span>暖</span>
+	                    <input type="radio" name="tmp" value="2" <?php if($item['tmp'] == 2) echo "checked"; ?>><span>どちらも</span>
+	                    <input type="radio" name="tmp" value="3" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
 	                </li>
 	                <li class="price">
 	                    <h2 class="title">値段</h2>
 	                    <input type="text" class="inp" name="price" value="<?php echo $item['price']; ?>">円
 	                </li>
+	                <input type="hidden" name="id" value="<?php echo $id; ?>">
 	                <li class="sub_btn">
-	                    <button type="submit" class="btn btn-success">変更</button>
+	                    <button type="submit" class="btn btn-success" onClick="check()">変更</button>
 	                </li>
 	            </ul>
 	        <?php }else{ echo "ERROR"; }?>

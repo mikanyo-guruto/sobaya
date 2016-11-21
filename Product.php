@@ -59,9 +59,25 @@ class Product {
 		}
 	}
     
-    public function updateRecode() {
-		echo "in";
-		exit;
+    public function updateRecode($id, $name, $tmp, $price) {
+		$error = null;
+		// バリデーションチェック
+		
+		// DB操作
+		$db = new PDO($this->dsn, $this->user, $this->pass);
+		$query = "UPDATE products SET name = :name, price = :price, tmp = :tmp WHERE id = :id";
+		$stmt = $db->prepare($query);
+		$stmt->bindValue(':id', $id, PDO::PARAM_INT);
+		$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+		$stmt->bindValue(':price', $price, PDO::PARAM_INT);
+		$stmt->bindValue(':tmp', $tmp, PDO::PARAM_INT);
+		
+		if($stmt->execute()) {
+			return true;
+		}else{
+			$error = "db insert error";
+			return $error;
+		}
 	}
     
     /*

@@ -1,12 +1,17 @@
 <html>
 <head>
+	<meta charset="UTF-8">
+	
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/edit.css">
 </head>
 <?php
 	include 'Product.php';
+	session_start();
 	$product = new Product();
 	$recode = $product->getRecodes();
+
+var_dump($_SESSION['msg']);
 
 	function getTmpStr($tmp) {
 		$str = null;
@@ -34,6 +39,14 @@
 <body>
     <div class="wrap">
         <h1>メニュー変更画面</h1>
+        <?php if(!empty($_SESSION['msg'])) { ?>
+	        <div class="msg">
+	        	<h3><?php echo $_SESSION['msg']; ?></h3>
+	        </div>
+	    <?php 
+	    	unset($_SESSION['msg']);
+	    }
+	    ?>
         <div class="menu_edit_main">
             <div class="menu">
             	<ul class="nav nav-tabs nav-justified">
