@@ -11,8 +11,6 @@
 	$product = new Product();
 	$recode = $product->getRecodes();
 
-var_dump($_SESSION['msg']);
-
 	function getTmpStr($tmp) {
 		$str = null;
 		$html = null;
