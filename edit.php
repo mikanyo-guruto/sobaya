@@ -64,13 +64,17 @@
 		                    	foreach($recode['noodle'] as $key) {
 	                    ?>
 	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
+		                    	<li>
+		                    		<div class="li_left">
+			                    		<div class="tmp">
+			                    			<?php echo getTmpStr($key['tmp']); ?>
+			                    		</div>
+			                            <img src="./img/menu/<?php echo $key['img']; ?>">
+			                        </div>
+		                            <div class="li_right">
+		                            	<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                        	</div>
+		                        </li>
 	                        </a>
 	                    <?php 	}
 	                    	}else{
@@ -86,15 +90,19 @@
 	                		if(!empty($recode['rice'])) {
 		                    	foreach($recode['rice'] as $key) {
 	                    ?>
-	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
-	                        </a>
+	                    <a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
+		                   	<li>
+		                   		<div class="li_left">
+			                   		<div class="tmp">
+			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                  		</div>
+			                        <img src="./img/menu/<?php echo $key['img']; ?>">
+			                    </div>
+		                       	<div class="li_right">
+		                       		<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                       	</div>
+		                    </li>
+	                    </a>
 	                    <?php 	}
 	                    	}else{
 								echo "データがありません";
@@ -109,15 +117,19 @@
 	                		if(!empty($recode['pot'])) {
 		                    	foreach($recode['pot'] as $key) {
 	                    ?>
-	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
-	                        </a>
+	                   <a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
+		                   	<li>
+		                   		<div class="li_left">
+			                   		<div class="tmp">
+			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                  		</div>
+			                        <img src="./img/menu/<?php echo $key['img']; ?>">
+			                    </div>
+		                       	<div class="li_right">
+		                       		<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                       	</div>
+		                    </li>
+	                    </a>
 	                    <?php 	}
 	                    	}else{
 								echo "データがありません";
@@ -132,15 +144,19 @@
 	                		if(!empty($recode['bamboo_steamer'])) {
 		                    	foreach($recode['bamboo_steamer'] as $key) {
 	                    ?>
-	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
-	                        </a>
+	                    <a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
+		                   	<li>
+		                   		<div class="li_left">
+			                   		<div class="tmp">
+			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                  		</div>
+			                        <img src="./img/menu/<?php echo $key['img']; ?>">
+			                    </div>
+		                       	<div class="li_right">
+		                       		<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                       	</div>
+		                    </li>
+	                    </a>
 	                    <?php 	}
 	                    	}else{
 								echo "データがありません";
@@ -155,15 +171,19 @@
 	                		if(!empty($recode['mini'])) {
 		                    	foreach($recode['mini'] as $key) {
 	                    ?>
-	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
-	                        </a>
+	                    <a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
+		                   	<li>
+		                   		<div class="li_left">
+			                   		<div class="tmp">
+			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                  		</div>
+			                        <img src="./img/menu/<?php echo $key['img']; ?>">
+			                    </div>
+		                       	<div class="li_right">
+		                       		<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                       	</div>
+		                    </li>
+	                    </a>
 	                    <?php 	}
 	                    	}else{
 								echo "データがありません";
@@ -178,15 +198,19 @@
 	                		if(!empty($recode['drink'])) {
 		                    	foreach($recode['drink'] as $key) {
 	                    ?>
-	                    	<a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
-	                    	<li>
-	                    		<div class="tmp">
-	                    			<?php echo getTmpStr($key['tmp']); ?>
-	                    		</div>
-	                            <img src="./img/menu/<?php echo $key['img']; ?>">
-	                            <h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
-	                        </li>
-	                        </a>
+	                    <a href="<?php echo "./detail.php?id=" . $key['id']; ?>">
+		                   	<li>
+		                   		<div class="li_left">
+			                   		<div class="tmp">
+			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                  		</div>
+			                        <img src="./img/menu/<?php echo $key['img']; ?>">
+			                    </div>
+		                       	<div class="li_right">
+		                       		<h2><?php echo $key['name']; ?></h2><h3><?php echo $key['price']; ?>円</h3>
+		                       	</div>
+		                    </li>
+	                    </a>
 	                    <?php 	}
 	                    	}else{
 								echo "データがありません";

@@ -22,31 +22,37 @@
 ?>
 <body>
     <div class="wrap">
-        <h1>メニュー変更画面</h1>
-        <div class="main">
-            <form name="edit" class="edit" id="edit" action="action.php" method="post">
+        <div class="main_contents">
+		    <h1>メニュー変更画面</h1>
+		    <hr>
+            <form name="edit" class="edit" id="edit" action="action.php" method="post" enctype="multipart/form-data">
             <?php if(!empty($item)) { ?>
-	            <img src="./img/menu/<?php echo $item['img']; ?>">
-	            <ul>
-	                <li class="name">
-	                    <h2 class="title">商品名</h2><input type="text" class="inp" name="name" value="<?php echo $item['name']; ?>">
-	                </li>
-	                <li class="warmth">
-	                    <h2 class="title">暖かさ</h2>
-	                    <input type="radio" name="tmp" value="0" <?php if($item['tmp'] == 0) echo "checked"; ?>><span>冷</span>
-	                    <input type="radio" name="tmp" value="1" <?php if($item['tmp'] == 1) echo "checked"; ?>><span>暖</span>
-	                    <input type="radio" name="tmp" value="2" <?php if($item['tmp'] == 2) echo "checked"; ?>><span>どちらも</span>
-	                    <input type="radio" name="tmp" value="3" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
-	                </li>
-	                <li class="price">
-	                    <h2 class="title">値段</h2>
-	                    <input type="text" class="inp" name="price" value="<?php echo $item['price']; ?>">円
-	                </li>
-	                <input type="hidden" name="id" value="<?php echo $id; ?>">
-	                <li class="sub_btn">
-	                    <button type="submit" class="btn btn-success" onClick="check()">変更</button>
-	                </li>
-	            </ul>
+	            <div class="left_contents">
+		            <img src="./img/menu/<?php echo $item['img']; ?>">
+		            <input type="file" name="img">
+	            </div>
+	            <div class="right_contents">
+		            <ul>
+		                <li class="name">
+		                    <h2 class="title">商品名</h2><input type="text" class="inp" name="name" value="<?php echo $item['name']; ?>">
+		                </li>
+		                <li class="warmth">
+		                    <h2 class="title">暖かさ</h2>
+		                    <input type="radio" name="tmp" value="0" <?php if($item['tmp'] == 0) echo "checked"; ?>><span>冷</span>
+		                    <input type="radio" name="tmp" value="1" <?php if($item['tmp'] == 1) echo "checked"; ?>><span>暖</span>
+		                    <input type="radio" name="tmp" value="2" <?php if($item['tmp'] == 2) echo "checked"; ?>><span>どちらも</span>
+		                    <input type="radio" name="tmp" value="3" <?php if($item['tmp'] == 3) echo "checked"; ?>><span>無</span>
+		                </li>
+		                <li class="price">
+		                    <h2 class="title">値段</h2>
+		                    <input type="text" class="inp" name="price" value="<?php echo $item['price']; ?>">円
+		                </li>
+		                <input type="hidden" name="id" value="<?php echo $id; ?>">
+		                <li class="sub_btn">
+		                    <button type="submit" class="btn btn-success" onClick="check()">変更</button>
+		                </li>
+		            </ul>
+	            </div>
 	        <?php }else{ echo "ERROR"; }?>
             </form>
         </div>

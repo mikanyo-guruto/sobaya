@@ -1,3 +1,7 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 h2 {
     margin: 0;
     width: 120px;
@@ -15,20 +19,31 @@ ul {
     line-height: 40px;
 }
 
-.main {
+/* main_contents要素 */
+.main_contents {
     height: 240px;
+    margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
     width: 1000px;
 }
-.main ul {
+.main_contents ul {
     height: auto;
 }
-.main ul li {
+.main_contents ul li {
     clear: both;
     height: 40px;
     overflow: hidden;
 }
+
+.main_contents .left_contents {
+	float: left;
+	width: 300px;
+}
+.main_contents .right_contents {
+	width: auto;
+}
+
 .edit {
     height: auto;
 }

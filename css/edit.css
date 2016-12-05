@@ -1,17 +1,60 @@
+.menu_edit_main {
+	margin-left: 10px;
+	margin-right: 10px;
+}
 .menu_contents ul {
     padding: 0;
+    
+    width: 100%;
+}
+.menu_contents ul a {
+	text-decoration: none;
 }
 .menu_contents ul li {
     border: solid 1px black;
     border-radius: 25px 25px 25px 25px;
     clear: both;
     list-style: none;
-    height: 230px;
+    height: 220px;
     margin-top: 10px;
+    position: relative;
     width: 100%;
 }
-.menu_contents ul li img {
+.menu_contents ul .li_left,
+.menu_contents ul .li_right {
+	height: 220px;
+	overflow: hidden;
+	padding: 9px;
+}
+/* リスト左側 */
+.menu_contents ul .li_left {
+	float: left;
+}
+.menu_contents ul .li_left img {
     float: left;
     height: 200px;
     width: 250px;
+}
+
+/* リスト右側 */
+.menu_contents ul .li_right {
+}
+
+/* 暖かさ */
+.menu_contents .tmp p {
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+.menu_contents .tmp p:not(:first-child) {
+	margin-left: 30px;
+}
+.menu_contents .tmp .cool {
+	color: skyblue;
+}
+.menu_contents .tmp .hot {
+	color: red;
 }
