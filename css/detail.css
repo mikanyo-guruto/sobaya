@@ -27,7 +27,7 @@ ul,h2 {
 }
 .right_contents {
 	overflow: hidden;
-	width: 900px;
+	width: auto;
 }
 .right_contents ul {
     margin-left: 20px;
@@ -67,5 +67,5 @@ ul,h2 {
 .sub_btn button {
 	bottom: 0;
 	position:absolute;
-	width: 70%;
+	width: 600px;
 }
