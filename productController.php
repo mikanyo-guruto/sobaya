@@ -7,7 +7,7 @@
 	$name = $_POST['name'];
 	$tmp = $_POST['tmp'];
 	$price = $_POST['price'];
-	$img = null;
+	$img = $_POST['img'];
 	
 	// ディレクトリの指定
 	$tmp_dir = __DIR__ . "/tmp/";

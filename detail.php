@@ -30,6 +30,7 @@
             <?php if(!empty($item)) { ?>
 	            <div class="left_contents">
 		            <img src="./img/menu/<?php echo $item['img']; ?>">
+		            <input type="hidden" name="img" value="<?php echo $item['img']; ?>">
 		            <input type="file" name="img">
 	            </div>
 	            <div class="right_contents">
