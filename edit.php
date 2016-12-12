@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/edit.css">
 </head>
 <?php
+	include 'common/admin.php';
 	include 'Product.php';
-	session_start();
 	$product = new Product();
 	$recode = $product->getRecodes();
 
@@ -37,6 +37,7 @@
 <body>
     <div class="wrap">
         <h1>メニュー変更画面</h1>
+	    <a href="./loginController.php?action=logout"><input type="button" class="btn btn-primary" value="ログアウト"></a>
         <?php if(!empty($_SESSION['msg'])) { ?>
 	        <div class="msg">
 	        	<h3><?php echo $_SESSION['msg']; ?></h3>

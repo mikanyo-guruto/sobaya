@@ -14,7 +14,8 @@
     }
     </script>
 </head>
-<?php 
+<?php
+	include 'common/admin.php';
 	include 'Product.php';
 	$product = new Product();
 	$id = $_GET['id'];
@@ -25,7 +26,7 @@
         <div class="main_contents">
 		    <h1>メニュー変更画面</h1>
 		    <hr>
-            <form name="edit" class="edit" id="edit" action="action.php" method="post" enctype="multipart/form-data">
+            <form name="edit" class="edit" id="edit" action="productController.php" method="post" enctype="multipart/form-data">
             <?php if(!empty($item)) { ?>
 	            <div class="left_contents">
 		            <img src="./img/menu/<?php echo $item['img']; ?>">
