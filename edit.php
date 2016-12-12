@@ -10,29 +10,6 @@
 	include 'Product.php';
 	$product = new Product();
 	$recode = $product->getRecodes();
-
-	function getTmpStr($tmp) {
-		$str = null;
-		$html = null;
-		if($tmp == "both") {
-			$html = '
-				<p class="cool">冷</p>
-				<p class="hot">暖</p>
-			';
-		}else{
-			switch($tmp){
-			case "cool":
-				$str = "冷";
-				break;
-			case "hot":
-				$str = "暖";
-				break;
-			}
-			$html = "<p class=" . $tmp . ">" . $str . "</p>";
-		}
-		
-		return $html;
-	}
 ?>
 <body>
     <div class="wrap">
@@ -68,7 +45,7 @@
 		                    	<li>
 		                    		<div class="li_left">
 			                    		<div class="tmp">
-			                    			<?php echo getTmpStr($key['tmp']); ?>
+			                    			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                    		</div>
 			                            <img src="./img/menu/<?php echo $key['img']; ?>">
 			                        </div>
@@ -95,7 +72,7 @@
 		                   	<li>
 		                   		<div class="li_left">
 			                   		<div class="tmp">
-			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                   			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                  		</div>
 			                        <img src="./img/menu/<?php echo $key['img']; ?>">
 			                    </div>
@@ -122,7 +99,7 @@
 		                   	<li>
 		                   		<div class="li_left">
 			                   		<div class="tmp">
-			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                   			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                  		</div>
 			                        <img src="./img/menu/<?php echo $key['img']; ?>">
 			                    </div>
@@ -149,7 +126,7 @@
 		                   	<li>
 		                   		<div class="li_left">
 			                   		<div class="tmp">
-			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                   			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                  		</div>
 			                        <img src="./img/menu/<?php echo $key['img']; ?>">
 			                    </div>
@@ -176,7 +153,7 @@
 		                   	<li>
 		                   		<div class="li_left">
 			                   		<div class="tmp">
-			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                   			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                  		</div>
 			                        <img src="./img/menu/<?php echo $key['img']; ?>">
 			                    </div>
@@ -203,7 +180,7 @@
 		                   	<li>
 		                   		<div class="li_left">
 			                   		<div class="tmp">
-			                   			<?php echo getTmpStr($key['tmp']); ?>
+			                   			<?php echo $product->getTmpStr($key['tmp']); ?>
 			                  		</div>
 			                        <img src="./img/menu/<?php echo $key['img']; ?>">
 			                    </div>

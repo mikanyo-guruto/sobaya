@@ -105,4 +105,28 @@ class Product {
 		}
 		return $str;
 	}
+	
+	// tmpに応じた文字を返す
+	function getTmpStr($tmp) {
+		$str = null;
+		$html = null;
+		if($tmp == "both") {
+			$html = '
+				<p class="cool">冷</p>
+				<p class="hot">暖</p>
+			';
+		}else{
+			switch($tmp){
+			case "cool":
+				$str = "冷";
+				break;
+			case "hot":
+				$str = "暖";
+				break;
+			}
+			$html = "<p class=" . $tmp . ">" . $str . "</p>";
+		}
+		
+		return $html;
+	}
 }
