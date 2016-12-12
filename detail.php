@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/detail.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.admin.css">
     <script type="text/javascript"> 
     function check(){
         if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示
@@ -23,15 +24,14 @@
 ?>
 <body>
     <div class="wrap">
+		<?php include 'common/view/admin.header.php'; ?>
         <div class="main_contents">
-		    <h1>メニュー変更画面</h1>
-		    <hr>
             <form name="edit" class="edit" id="edit" action="productController.php" method="post" enctype="multipart/form-data">
             <?php if(!empty($item)) { ?>
 	            <div class="left_contents">
 		            <img src="./img/menu/<?php echo $item['img']; ?>">
 		            <input type="hidden" name="img" value="<?php echo $item['img']; ?>">
-		            <input type="file" name="img">
+		            <input type="file" name="img" class="img_input">
 	            </div>
 	            <div class="right_contents">
 		            <ul>

@@ -1,83 +1,71 @@
-*{
-	margin: 0;
-	padding: 0;
-}
-h2 {
-    margin: 0;
-    width: 120px;
-}
-ul {
+ul,h2 {
     margin: 0;
 }
-.inp {
-    font-size: 18px;
-    height: 100%;
-    padding-left: 10px;
-}
-.title {
-    float: left;
-    line-height: 40px;
-}
+
 
 /* main_contents要素 */
 .main_contents {
-    height: 240px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 1000px;
-}
-.main_contents ul {
-    height: auto;
+    height: 300px;
+    position: relative;
+    width: 1200px;
 }
 .main_contents ul li {
     clear: both;
     height: 40px;
     overflow: hidden;
 }
-
-.main_contents .left_contents {
+.left_contents {
 	float: left;
 	width: 300px;
 }
-.main_contents .right_contents {
-	width: auto;
-}
-
-.edit {
-    height: auto;
-}
-.edit img {
-    float: left;
+.left_contents img {
+	float: left;
     height: 240px;
+	margin-bottom: 20px;
     width: 300px;
 }
-.edit ul {
+.right_contents {
+	overflow: hidden;
+	width: 900px;
+}
+.right_contents ul {
     margin-left: 20px;
     height: 100%;
     overflow: hidden;
 }
-.edit ul li {
+.right_contents ul li {
     list-style: none;
+    height: 50px;
 }
-.edit ul li:not(:first-child) {
+.right_contents h2 {
+	line-height: 50px;
+	width: 120px;
+}
+.right_contents ul li:not(:first-child) {
     margin-top: 20px;
 }
-
-/* #商品名 */
+.title {
+    float: left;
+    line-height: 40px;
+}
 .name {
     overflow: hidden;
 }
-/* end */
-
-/* #暖かさ */
 .warmth {
     font-size: 18px;
 }
 .warmth span {
     line-height: 40px;
 }
-/* end */
-.sub_btn > button{
-    width: 100%;
+.inp {
+    font-size: 18px;
+    height: 100%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+.sub_btn button {
+	bottom: 0;
+	position:absolute;
+	width: 70%;
 }
