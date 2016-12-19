@@ -42,5 +42,5 @@
 	$_SESSION['msg'] = mb_convert_encoding($msg, 'utf-8', 'shift-jis');
 	
 	// ŠÇ—Òˆê——‰æ–Ê‚É–ß‚é
-	header("Location: ../edit.php");
+	header("Location: ../edit");
 	

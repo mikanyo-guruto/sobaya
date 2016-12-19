@@ -41,15 +41,14 @@ class Login
 						
 						$_SESSION['id'] = $id;
 						$_SESSION['msg'] = "ログインに成功しました。";
-						header('Location: ../edit.php');
+						header('Location: ../edit');
 						exit;
 					}
 				}
-				$_SESSION['msg'] = "ログインに失敗しました。";
-				header('Location: ../login.php');
+				$_SESSION['msg'] = "ログインに失敗しました。";			
 			}catch (PDOException $e){
-			    echo('Error:'.$e->getMessage());
-			    die();
+				$_SESSION['msg'] = "DatabaseError";
+			    header('Location: ../login');
 			}
 			
 			$dsn = null;
@@ -59,7 +58,7 @@ class Login
 		public function logout() {
 			session_start();
 			session_destroy();
-			header('Location: ../login.php');
+			header('Location: ../login');
 		}
 }
 
