@@ -18,7 +18,7 @@
 		?>
 	   </p>
        <h1>ログイン</h1>
-       <form action="loginController.php" method="post">
+       <form action="Controller/loginController.php" method="post">
            <p>ID:<input type="text" name="id"></p>
            <p>PASS:<input type="password" name="ps"></p>
            <input type="hidden" name="action" value="login">

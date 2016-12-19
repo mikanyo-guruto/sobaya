@@ -1,7 +1,12 @@
-h1 {
+a {
+	text-decoration: none;
+}
+
+.page_title {
 	float: left;
 	margin-left: 20px;
 }
+
 .logout {
 	float: right;
 	margin-right: 30px;

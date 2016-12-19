@@ -7,14 +7,14 @@
     <link rel="stylesheet" type="text/css" href="./css/common.admin.css">
 </head>
 <?php
-	include 'common/admin.php';
-	include 'Product.php';
+	include 'common/login_check.php';
+	include 'Model/Product.php';
 	$product = new Product();
 	$recode = $product->getRecodes();
 ?>
 <body>
     <div class="wrap">
-        <?php include 'common/view/admin.header.php'; ?>
+        <?php include 'common/view/admin/header.php'; ?>
         <?php if(!empty($_SESSION['msg'])) { ?>
 	        <div class="msg">
 	        	<h3><?php echo $_SESSION['msg']; ?></h3>

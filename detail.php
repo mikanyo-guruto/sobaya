@@ -16,23 +16,27 @@
     </script>
 </head>
 <?php
-	include 'common/admin.php';
-	include 'Product.php';
+	include 'common/login_check.php';
+	include 'Model/Product.php';
 	$product = new Product();
 	$id = $_GET['id'];
 	$item = $product->findId($id);
 ?>
 <body>
     <div class="wrap">
-		<?php include 'common/view/admin.header.php'; ?>
+    
+		<?php include 'common/view/admin/header.php'; ?>
+		
         <div class="main_contents">
-            <form name="edit" class="edit" id="edit" action="productController.php" method="post" enctype="multipart/form-data">
+            <form name="edit" class="edit" id="edit" action="Controller/productController.php" method="post" enctype="multipart/form-data">
             <?php if(!empty($item)) { ?>
+            
 	            <div class="left_contents">
 		            <img src="./img/menu/<?php echo $item['img']; ?>">
 		            <input type="hidden" name="img" value="<?php echo $item['img']; ?>">
 		            <input type="file" name="img" class="img_input">
 	            </div>
+	            
 	            <div class="right_contents">
 		            <ul>
 		                <li class="name">

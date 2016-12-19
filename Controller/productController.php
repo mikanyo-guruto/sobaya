@@ -1,5 +1,5 @@
 <?php
-	include 'Product.php';
+	include '../Model/Product.php';
 	session_start();
 	
 	// formのデータを変数に代入
@@ -11,7 +11,7 @@
 	
 	// ディレクトリの指定
 	$tmp_dir = __DIR__ . "/tmp/";
-	$img_dir = "./img/menu/";
+	$img_dir = "../img/menu/";
 	
 	if (isset($_FILES['img'])) {
 		if (move_uploaded_file($_FILES['img']['tmp_name'], $tmp_dir . "/" . basename($_FILES['img']['name']))) {
@@ -42,5 +42,5 @@
 	$_SESSION['msg'] = mb_convert_encoding($msg, 'utf-8', 'shift-jis');
 	
 	// 管理者一覧画面に戻る
-	header("Location: ./edit.php");
+	header("Location: ../edit.php");
 	

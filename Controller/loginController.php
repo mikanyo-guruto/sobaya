@@ -8,6 +8,7 @@ class Login
 			$this->action = $action;
 		}
 		
+		// ログインかログアウトかの判定
 		public function action() {
 			switch($this->action) {
 				case "login":
@@ -40,12 +41,12 @@ class Login
 						
 						$_SESSION['id'] = $id;
 						$_SESSION['msg'] = "ログインに成功しました。";
-						header('Location: ./edit.php');
+						header('Location: ../edit.php');
 						exit;
 					}
 				}
 				$_SESSION['msg'] = "ログインに失敗しました。";
-				header('Location: ./login.php');
+				header('Location: ../login.php');
 			}catch (PDOException $e){
 			    echo('Error:'.$e->getMessage());
 			    die();
@@ -58,7 +59,7 @@ class Login
 		public function logout() {
 			session_start();
 			session_destroy();
-			header('Location: ./login.php');
+			header('Location: ../login.php');
 		}
 }
 

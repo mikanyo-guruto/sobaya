@@ -8,7 +8,7 @@
 
 </head>
 <?php
-	include 'Product.php';
+	include './Model/Product.php';
 	$product = new Product();
 	$recode = $product->getRecodes();
 
@@ -42,16 +42,7 @@
             <h1>お品書き</h1>
         </div>
 
-        <div class="navbar">
-            <div class="container">
-                <ul class="nav nav-justified">
-                    <li class="active"><a href="./index.html">トップ</a></li>
-                    <li><a href="./about.html">店舗概要</a></li>
-                    <li><a href="./menu.html">お品書き</a></li>
-                    <li><a href="./contact.html">問い合わせ</a></li>
-                </ul>
-            </div>
-        </div>
+        <?php include 'common/view/usr/nav.php' ?>
         
         <div class="menu">
             <ul class="nav nav-tabs nav-justified">
@@ -192,22 +183,7 @@
             </div>
         </div>
 
-        <div class="footer">
-            <div class="footer_left">
-                <h3>お問い合わせ</h3>
-                <p class="tel">000-0000-0000</p>
-            </div>
-            <div class="footer_right">
-                <p>〒183-0005 東京都府中市若松町２丁目４−７</p>
-                <p>営業時間</p>
-                <p>
-                    昼の部：11時00分～15時00分<br>
-                    夜の部：17時30分～20時30分
-                </p>
-                <p>定休日：火曜日</p>
-            </div>
-            <p class="copy">Copyright &copy; Sobaya all rights reserve</p>
-        </div>
+        <?php include 'common/view/usr/footer.php'; ?>
         
     </div>
 </div>
