@@ -22,6 +22,7 @@ class Login
 		
 		// ログインする関数
 		public function login() {
+
 			$id = $_POST['id'];
 			$ps = $_POST['ps'];
 			
@@ -36,16 +37,20 @@ class Login
 				// idの存在チェック
 				$stmt = $dbh->query('SELECT user_id, password FROM users WHERE user_id = "' . $id . '"')->fetch(PDO::FETCH_ASSOC);
 			    if($stmt) {
+
 					// パスワード比較
 					if(password_verify($ps, $stmt["password"])) {
-						
 						$_SESSION['id'] = $id;
 						$_SESSION['msg'] = "ログインに成功しました。";
 						header('Location: ../edit');
 						exit;
+					}else{
+						$_SESSION['msg'] = "ログインに失敗しました。";
+						header('Location: ../login');
 					}
 				}
-				$_SESSION['msg'] = "ログインに失敗しました。";			
+				$_SESSION['msg'] = "ログインに失敗しました。";
+				header('Location: ../login');
 			}catch (PDOException $e){
 				$_SESSION['msg'] = "DatabaseError";
 			    header('Location: ../login');
