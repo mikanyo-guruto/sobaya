@@ -3,16 +3,17 @@
 	session_start();
 	
 	// formのデータを変数に代入
-	$id = $_POST['id'];
 	$name = $_POST['name'];
 	$tmp = $_POST['tmp'];
 	$price = $_POST['price'];
+	$genre = $_POST['genre'];
 	$img = $_POST['img'];
 	
 	// ディレクトリの指定
 	$tmp_dir = __DIR__ . "/tmp/";
 	$img_dir = "../img/menu/";
 	
+	// 画像登録処理
 	if (isset($_FILES['img'])) {
 		if (move_uploaded_file($_FILES['img']['tmp_name'], $tmp_dir . "/" . basename($_FILES['img']['name']))) {
 			// 名前をユニークに
@@ -29,7 +30,7 @@
 	
 	// アップデート処理
 	$product = new Product();
-	$stmt = $product->updateRecode($id, $name, $tmp, $price, $img);
+	$stmt = $product->insertRecode($name, $tmp, $price, $genre, $img);
 	
 	// 成功していたら成功メッセージを代入
 	$msg = null;

@@ -80,6 +80,25 @@ class Product {
 			return $error;
 		}
 	}
+
+	public function insertRecode($name, $tmp, $price, $genre, $img) {
+		// DB操作
+		$db = new PDO($this->dsn, $this->user, $this->pass);
+		$query = "INSERT products SET name = :name, price = :price, tmp = :tmp, genre = :genre, img = :img";
+		$stmt = $db->prepare($query);
+		$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+		$stmt->bindValue(':price', $price, PDO::PARAM_INT);
+		$stmt->bindValue(':tmp', $tmp, PDO::PARAM_INT);
+		$stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
+		$stmt->bindValue(':img', $img, PDO::PARAM_STR);
+		
+		if($stmt->execute()) {
+			return true;
+		}else{
+			$error = "db insert error";
+			return $error;
+		}
+	}
     
     /*
     	### 受け取った温度データを文字に変換する関数

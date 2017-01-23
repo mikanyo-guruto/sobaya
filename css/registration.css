@@ -1,0 +1,71 @@
+ul,h2 {
+    margin: 0;
+}
+
+
+/* main_contents要素 */
+.main_contents {
+    margin: 0 auto;
+    height: 400px;
+    position: relative;
+    width: 1200px;
+}
+.main_contents ul li {
+    clear: both;
+    height: 40px;
+    overflow: hidden;
+}
+.left_contents {
+	float: left;
+	width: 300px;
+}
+.left_contents img {
+	float: left;
+    height: 240px;
+	margin-bottom: 20px;
+    width: 300px;
+}
+.right_contents {
+	overflow: hidden;
+	width: auto;
+}
+.right_contents ul {
+    margin-left: 20px;
+    height: 100%;
+    overflow: hidden;
+}
+.right_contents ul li {
+    list-style: none;
+    height: 50px;
+}
+.right_contents h2 {
+	line-height: 50px;
+	width: 120px;
+}
+.right_contents ul li:not(:first-child) {
+    margin-top: 20px;
+}
+.title {
+    float: left;
+    line-height: 40px;
+}
+.name {
+    overflow: hidden;
+}
+.warmth {
+    font-size: 18px;
+}
+.warmth span {
+    line-height: 40px;
+}
+.inp {
+    font-size: 18px;
+    height: 100%;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+.sub_btn button {
+	bottom: 0;
+	position:absolute;
+	width: 600px;
+}
